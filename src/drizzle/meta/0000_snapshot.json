@@ -1,0 +1,54 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "6",
+  "dialect": "postgresql",
+  "tables": {},
+  "enums": {
+    "dev.jenis_kelamin": {
+      "name": "jenis_kelamin",
+      "values": [
+        "L",
+        "P"
+      ],
+      "schema": "dev"
+    },
+    "dev.status_kawin": {
+      "name": "status_kawin",
+      "values": [
+        "B",
+        "K",
+        "CM",
+        "CH"
+      ],
+      "schema": "dev"
+    },
+    "public.jenis_kelamin": {
+      "name": "jenis_kelamin",
+      "values": [
+        "L",
+        "P"
+      ],
+      "schema": "public"
+    },
+    "public.status_kawin": {
+      "name": "status_kawin",
+      "values": [
+        "B",
+        "K",
+        "CM",
+        "CH"
+      ],
+      "schema": "public"
+    }
+  },
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "tables": {}
+  }
+}
