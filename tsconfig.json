@@ -11,7 +11,8 @@
       "@tools/*": ["./src/tools/*"],
       "@components/*": ["./src/components/*"],
       "schema": ["./src/drizzle/schema.ts"],
-      "db": ["./src/drizzle/db.ts"],
+      "db": ["./src/drizzle/db.ts"],  
+      "utils" : ["./src/utils/index.ts"],
     },
   }
 }
