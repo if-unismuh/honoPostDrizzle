@@ -1,28 +1,19 @@
-import { serial, text, timestamp, pgTable, uuid } from "drizzle-orm/pg-core";
-import { v4 as uuidv4 } from "uuid";
-export const user = pgTable("user", {
-  id: uuid("id").primaryKey().$default(uuidv4),
-  nim: text("nim"),
-  email: text("email"),
-  password: text("password"),
-  role: text("role"),
-  createdAt: timestamp("created_at"),
-  updatedAt: timestamp("updated_at"),
+import { pgTable, uuid, varchar, timestamp } from "drizzle-orm/pg-core";
+
+export const users = pgTable("users", {
+  id: uuid("id").defaultRandom().primaryKey().notNull(),
+  username: varchar("username", { length: 20 }).notNull(),
+  password: varchar("password", { length: 150 }).notNull(),
+  role: varchar("role", { length: 10 }).notNull(),
+  created_at: timestamp("created_at", { mode: "string" }).defaultNow(),
+  updated_at: timestamp("updated_at", { mode: "string" }).defaultNow(),
 });
 
-export const mhs = pgTable("mhs", {
-  id: uuid("id").primaryKey().$default(uuidv4),
-  nim: text("nim"),
-  nama: text("nama"),
-  prodi: text("prodi"),
-  createdAt: timestamp("created_at"),
-  updatedAt: timestamp("updated_at"),
-});
-
-export const beasiswa = pgTable("beasiswa", {
-  id: uuid("id").primaryKey().$default(uuidv4),
-  nama: text("nama"),
-  jenis: text("jenis"),
-  createdAt: timestamp("created_at"),
-  updatedAt: timestamp("updated_at"),
+export const mhs = pgTable("mahasiswa", {
+  id: uuid("id").defaultRandom().primaryKey().notNull(),
+  nim: varchar("nim", { length: 15 }),
+  nama: varchar("nama", { length: 100 }),
+  prodi: varchar("prodi", { length: 10 }),
+  created_at: timestamp("created_at", { mode: "string" }),
+  updated_at: timestamp("updated_at", { mode: "string" }),
 });
