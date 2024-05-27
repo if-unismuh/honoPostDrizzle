@@ -4,7 +4,7 @@ import { users } from "schema";
   try {
     client.connect();
     await db.insert(users).values({
-      username: "admin",
+      username: "admin2",
       password: await Bun.password.hash("samaKemarin00"),
       role: "admin",
     });

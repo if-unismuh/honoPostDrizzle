@@ -12,13 +12,15 @@
     "push": "bun drizzle-kit push"
   },
   "dependencies": {
+    "@hono/swagger-ui": "^0.2.2",
+    "@hono/zod-openapi": "^0.14.0",
     "@neondatabase/serverless": "^0.9.3",
     "@types/uuid": "^9.0.8",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.30.10",
     "drizzle-zod": "^0.5.1",
     "figlet": "^1.7.0",
-    "hono": "^4.3.8",
+    "hono": "^4.3.11",
     "pg": "^8.11.5",
     "uuid": "^9.0.1",
     "zod": "^3.23.8"
