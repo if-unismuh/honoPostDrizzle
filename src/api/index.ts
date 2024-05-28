@@ -9,8 +9,12 @@ export async function checkUsers(username: string) {
       headers: { "Content-Type": "application/json" },
     });
     const data = await users.json();
-    return data?.data?.mahasiswaUser;
+    if (data.data.mahasiswaUser === null) {
+      throw new Error("Data tidak ditemukan");
+    } else {
+      return data.data.mahasiswaUser;
+    }
   } catch (error: any) {
-    return error;
+    throw new Error(error.message);
   }
 }

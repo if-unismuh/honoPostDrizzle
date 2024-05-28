@@ -9,7 +9,8 @@
     "start": "bun run src/server.ts",
     "seed": "bun run src/drizzle/seed.ts",
     "generate": "bun drizzle-kit generate",
-    "push": "bun drizzle-kit push"
+    "push": "bun drizzle-kit push",
+    "studio": "bun drizzle-kit studio"
   },
   "dependencies": {
     "@hono/swagger-ui": "^0.2.2",
